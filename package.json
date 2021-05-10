@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve -o",
-    "build": "ng build",
+    "start": "node server.js",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint --fix=true",
     "e2e": "ng e2e"
@@ -19,6 +19,8 @@
     "@angular/platform-browser": "~11.2.9",
     "@angular/platform-browser-dynamic": "~11.2.9",
     "@angular/router": "~11.2.9",
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
     "materialize-css": "^1.0.0-rc.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
