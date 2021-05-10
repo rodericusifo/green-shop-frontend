@@ -1,0 +1,24 @@
+<div class="col s12 m6 l4">
+  <div class="card col-content">
+    <div class="card-image">
+      <img
+        [src]="product.imageURL"
+        class="responsive-img pictureSkeleton productItemImage"
+      />
+      <button (click)="emitProduct(product._id)"
+        class="btn-floating btn-large btn-medium halfway-fab waves-effect waves-light green"
+      >
+        <i class="material-icons">add_shopping_cart</i>
+      </button>
+    </div>
+    <div class="divider"></div>
+    <div class="card-content">
+      <a class="animatedHoverText" [routerLink]="'/product/' + product._id"
+        ><span class="card-title left-align green-text productItemCardTitle">{{
+          product.name
+        }}</span></a
+      >
+      <p class="left-align">Price: Rp{{ product.price }},-</p>
+    </div>
+  </div>
+</div>

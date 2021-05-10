@@ -1,0 +1,60 @@
+<form
+  class="row card registerForm"
+  [formGroup]="registerForm"
+  (ngSubmit)="onSubmit()"
+>
+  <h5 class="center">Register - Form</h5>
+  <div class="input-field col s12">
+    <input
+      id="email"
+      type="email"
+      class="validate"
+      formControlName="email"
+      required
+      email
+    />
+    <label for="email">Email</label>
+    <span
+      class="helper-text"
+      data-error="Please input a valid email"
+      *ngIf="
+        !registerForm.get('email')!.valid && registerForm.get('email')!.touched
+      "
+    ></span>
+  </div>
+  <div class="input-field col s12">
+    <input
+      id="password"
+      type="password"
+      class="validate"
+      formControlName="password"
+      required
+      minlength="6"
+    />
+    <label for="password">Password</label>
+    <span
+      class="helper-text"
+      data-error="Please input a valid password (at least 6 digits)"
+      *ngIf="
+        !registerForm.get('password')!.valid &&
+        registerForm.get('password')!.touched
+      "
+    ></span>
+  </div>
+  <div class="center">
+    <button
+      [disabled]="!registerForm.valid"
+      class="btn green waves-effect waves-light registerFormButton"
+      type="submit"
+    >
+      Register
+    </button>
+  </div>
+  <div class="center registerFormInfo">
+    <p class="grey-text">
+      Already have an account?
+      <a [routerLink]="'/login'"><span class="green-text">Login</span></a>
+      here
+    </p>
+  </div>
+</form>

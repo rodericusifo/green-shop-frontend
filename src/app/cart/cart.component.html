@@ -1,0 +1,24 @@
+<section class="container cartListContainer" *ngIf="isLoaded">
+  <h4 class="black-text center">List of Cart</h4>
+  <div class="divider cartListDivider"></div>
+  <div class="row cartListRow" *ngIf="!isError">
+    <app-cart-item
+      (deleteCart)="deleteCart($event)"
+      (editCart)="editCart($event)"
+      *ngFor="let cart of carts"
+      [cart]="cart"
+    ></app-cart-item>
+    <div class="center">
+      <button
+        [disabled]="!isAllowCheckout"
+        [routerLink]="'/order/create'"
+        class="btn green waves-effect waves-light cartListCheckoutButton"
+      >
+        Checkout
+      </button>
+    </div>
+  </div>
+  <app-page-data-not-found *ngIf="isError"></app-page-data-not-found>
+</section>
+<app-page-footer *ngIf="isLoaded"></app-page-footer>
+<app-page-loader *ngIf="!isLoaded"></app-page-loader>

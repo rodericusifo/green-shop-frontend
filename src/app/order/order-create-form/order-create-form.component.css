@@ -1,0 +1,16 @@
+.orderCreateForm {
+  padding: 20px !important;
+  margin: 20px auto !important;
+  max-width: 300px;
+  width: auto;
+}
+
+.orderCreateFormButton {
+  margin-top: 20px !important;
+}
+
+@media (min-width: 993px) {
+  .orderCreateForm {
+    margin: 40px auto !important;
+  }
+}

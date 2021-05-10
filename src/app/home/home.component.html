@@ -1,0 +1,12 @@
+<app-jumbotron></app-jumbotron>
+<section class="container center serviceListContainer">
+  <h3 class="black-text">Service</h3>
+  <div class="divider serviceListDivider"></div>
+  <div class="row serviceListRow">
+    <app-service-item
+      *ngFor="let service of services"
+      [service]="service"
+    ></app-service-item>
+  </div>
+</section>
+<app-page-footer></app-page-footer>

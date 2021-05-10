@@ -1,0 +1,29 @@
+.underlineHeader {
+  text-decoration: underline;
+}
+
+.orderItemCard {
+  padding: 30px 30px 50px 30px !important;
+}
+
+.orderItemBuyerInfo {
+  margin-top: 20px !important;
+}
+
+.orderItemDivider {
+  min-height: 2px !important;
+  height: auto !important;
+}
+
+.orderedItemsContainer {
+  margin-top: 20px !important;
+}
+
+.orderedItemTotal {
+  margin-top: 30px !important;
+}
+
+.orderedItemTotalHeader {
+  margin-right: 50px !important;
+  font-weight: bold;
+}

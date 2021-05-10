@@ -1,0 +1,144 @@
+<nav class="green">
+  <div class="nav-wrapper container">
+    <a href="/" class="brand-logo topnavBrandTitle">GREEN SHOP</a>
+    <a
+      href="#"
+      data-target="sidenav"
+      class="sidenav-trigger"
+      aria-label="open the menu"
+      ><i class="material-icons topnavHamburgerButton" aria-hidden="true"
+        >menu</i
+      ></a
+    >
+    <ul class="right hide-on-med-and-down">
+      <li routerLinkActive="active">
+        <a [routerLink]="'/home'" class="waves-effect waves-light topnavLink"
+          >Home</a
+        >
+      </li>
+      <li routerLinkActive="active">
+        <a [routerLink]="'/product'" class="waves-effect waves-light topnavLink"
+          >Product</a
+        >
+      </li>
+      <li routerLinkActive="active">
+        <a [routerLink]="'/cart'" class="waves-effect waves-light topnavLink"
+          >Cart</a
+        >
+      </li>
+      <li routerLinkActive="active">
+        <a [routerLink]="'/order'" class="waves-effect waves-light topnavLink"
+          >Order</a
+        >
+      </li>
+      <li>
+        <a
+          *ngIf="!onLogged()"
+          [routerLink]="'/register'"
+          routerLinkActive="topnavActiveButton"
+          class="waves-effect btn black-text white hoverable topnavButton topnavLink"
+          >Register</a
+        >
+      </li>
+      <li>
+        <a
+          *ngIf="!onLogged()"
+          [routerLink]="'/login'"
+          routerLinkActive="topnavActiveButton"
+          class="waves-effect btn black-text white hoverable topnavButton topnavLink"
+          >Login</a
+        >
+      </li>
+      <li>
+        <a
+          *ngIf="onLogged()"
+          class="waves-effect btn black-text white hoverable topnavButton topnavLink"
+          (click)="onLogout()"
+          >Logout</a
+        >
+      </li>
+    </ul>
+    <ul class="sidenav" id="sidenav">
+      <li>
+        <div class="user-view">
+          <div class="background">
+            <img
+              src="/assets/images/sidenav-background.jpg"
+              class="responsive-img pictureSkeleton"
+            />
+          </div>
+          <a [routerLink]="'/'" (click)="closeSidenav()"
+            ><img
+              class="circle responsive-img pictureSkeleton sidenavCircleLogo"
+              src="/favicon.ico"
+          /></a>
+          <a [routerLink]="'/'" (click)="closeSidenav()"
+            ><span class="white-text name center sidenavBrandTitle"
+              >GREEN SHOP</span
+            ></a
+          >
+        </div>
+      </li>
+      <li routerLinkActive="active">
+        <a
+          class="waves-effect waves-light"
+          [routerLink]="'/home'"
+          (click)="closeSidenav()"
+          >Home</a
+        >
+      </li>
+      <li routerLinkActive="active">
+        <a
+          class="waves-effect waves-light"
+          [routerLink]="'/product'"
+          (click)="closeSidenav()"
+          >Product</a
+        >
+      </li>
+      <li routerLinkActive="active">
+        <a
+          class="waves-effect waves-light"
+          [routerLink]="'/cart'"
+          (click)="closeSidenav()"
+          >Cart</a
+        >
+      </li>
+      <li routerLinkActive="active">
+        <a
+          class="waves-effect waves-light"
+          [routerLink]="'/order'"
+          (click)="closeSidenav()"
+          >Order</a
+        >
+      </li>
+      <li><div class="divider"></div></li>
+      <li routerLinkActive="active">
+        <a
+          class="waves-effect waves-light"
+          *ngIf="!onLogged()"
+          [routerLink]="'/register'"
+          (click)="closeSidenav()"
+          >Register</a
+        >
+      </li>
+      <li routerLinkActive="active">
+        <a
+          class="waves-effect waves-light"
+          *ngIf="!onLogged()"
+          [routerLink]="'/login'"
+          (click)="closeSidenav()"
+          >Login</a
+        >
+      </li>
+      <li>
+        <a
+          class="waves-effect waves-light"
+          *ngIf="onLogged()"
+          (click)="onLogout()"
+          >Logout</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>
+<router-outlet></router-outlet>

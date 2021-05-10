@@ -1,0 +1,35 @@
+.headerOne {
+  margin: 50px auto 20px !important;
+}
+
+.headerFour {
+  text-shadow: 1px 1px black !important;
+  margin: 20px auto 50px !important;
+}
+
+@media (min-width: 601px) {
+  .headerOne {
+    margin: 130px auto 20px !important;
+  }
+
+  .headerFour {
+    margin: 20px auto 130px !important;
+  }
+}
+
+@media (min-width: 993px) {
+  .jumbotronParallaxContainer {
+    width: 100% !important;
+    top: -2px !important;
+  }
+}
+
+@media (min-width: 1201px) {
+  .headerOne {
+    margin: 150px auto 20px !important;
+  }
+
+  .headerFour {
+    margin: 20px auto 150px !important;
+  }
+}

@@ -1,0 +1,11 @@
+.cartItemImage {
+  max-height: 200px !important;
+  height: 200px !important;
+}
+
+@media (min-width: 601px) {
+  .cartItemImage {
+    min-width: 200px !important;
+    width: auto !important;
+  }
+}

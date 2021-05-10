@@ -1,0 +1,14 @@
+.footerWrapper {
+  padding: 20px !important;
+}
+
+.footerContent {
+  font-size: 14px !important;
+  text-align: center !important;
+  color: #aaaaaa !important;
+}
+
+.footerContentLink {
+  padding: 13px 0 !important;
+  font-weight: bold !important;
+}

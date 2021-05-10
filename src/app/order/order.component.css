@@ -1,0 +1,12 @@
+.orderListContainer {
+  margin: 20px auto !important;
+  min-height: 100% !important;
+}
+
+.orderListDivider {
+  min-height: 2px !important;
+}
+
+.orderListRow {
+  margin-top: 20px !important;
+}

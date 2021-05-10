@@ -1,0 +1,8 @@
+.registerContainer {
+  margin: 20px auto !important;
+  min-height: 100% !important;
+}
+
+.registerContainerDivider {
+  min-height: 2px !important;
+}

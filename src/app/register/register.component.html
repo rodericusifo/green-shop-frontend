@@ -1,0 +1,7 @@
+<section class="container registerContainer" *ngIf="isLoaded">
+  <h4 class="black-text center">Register</h4>
+  <div class="divider registerContainerDivider"></div>
+  <app-register-form (registerUser)="registerUser($event)"></app-register-form>
+</section>
+<app-page-footer *ngIf="isLoaded"></app-page-footer>
+<app-page-loader *ngIf="!isLoaded"></app-page-loader>

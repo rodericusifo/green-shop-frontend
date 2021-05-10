@@ -1,0 +1,14 @@
+<section class="container productListContainer" *ngIf="isLoaded">
+  <h4 class="black-text center">List of Product</h4>
+  <div class="divider productListDivider"></div>
+  <div class="row productListRow" *ngIf="!isError">
+    <app-product-item
+      *ngFor="let product of products"
+      (addProductToCart)="addProductToCart($event)"
+      [product]="product"
+    ></app-product-item>
+  </div>
+  <app-page-data-not-found *ngIf="isError"></app-page-data-not-found>
+</section>
+<app-page-footer *ngIf="isLoaded"></app-page-footer>
+<app-page-loader *ngIf="!isLoaded"></app-page-loader>

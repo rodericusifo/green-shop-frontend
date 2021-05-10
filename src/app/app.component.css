@@ -1,0 +1,24 @@
+.topnavBrandTitle,
+.topnavHamburgerButton,
+.sidenavBrandTitle {
+  font-size: 22px !important;
+}
+
+.sidenavCircleLogo {
+  border: 3px solid white !important;
+  margin: 0 100px !important;
+}
+
+@media (min-width: 993px) {
+  .topnavLink {
+    font-size: 14px !important;
+  }
+
+  .topnavButton {
+    padding-top: 5px !important;
+  }
+
+  .topnavActiveButton {
+    background-color: rgb(160, 232, 160) !important;
+  }
+}

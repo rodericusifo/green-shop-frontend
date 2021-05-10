@@ -1,0 +1,9 @@
+.loginContainer {
+    margin: 20px auto !important;
+    min-height: 100% !important;
+  }
+  
+  .loginContainerDivider {
+    min-height: 2px !important;
+  }
+  

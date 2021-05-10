@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: Montserrat;
+  src: url(/assets/fonts/ComicNeue-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(/assets/fonts/ComicNeue-Regular.ttf);
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box !important;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Comic Neue", cursive !important;
+}
+
+a,
+button {
+  min-width: 44px !important;
+  min-height: 44px !important;
+}
+
+.truncateText {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 5 !important;
+  -webkit-box-orient: vertical !important;
+}
+
+.pictureSkeleton {
+  background: lightgrey no-repeat center center !important;
+}
+
+.animatedHoverText:hover {
+  text-shadow: 0.6px 0.6px green !important;
+  transition: 0.1s !important;
+}

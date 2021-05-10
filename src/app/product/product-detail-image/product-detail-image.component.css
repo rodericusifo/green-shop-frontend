@@ -1,0 +1,11 @@
+.productDetailImage {
+  max-height: 200px !important;
+  height: 200px !important;
+}
+
+@media (min-width: 993px) {
+  .productDetailImage {
+    max-height: 300px !important;
+    height: 300px !important;
+  }
+}

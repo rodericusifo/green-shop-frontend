@@ -1,0 +1,12 @@
+.productListContainer {
+  margin: 20px auto !important;
+  min-height: 100% !important;
+}
+
+.productListDivider {
+  min-height: 2px !important;
+}
+
+.productListRow {
+  margin-top: 20px !important;
+}

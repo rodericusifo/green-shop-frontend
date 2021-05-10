@@ -1,0 +1,42 @@
+<div class="col s12">
+  <div class="card horizontal col-content">
+    <div class="card-image">
+      <img
+        [src]="cart.Product.imageURL"
+        class="responsive-img pictureSkeleton cartItemImage"
+      />
+    </div>
+    <div class="card-stacked">
+      <div class="card-content">
+        <a
+          class="animatedHoverText"
+          [routerLink]="'/product/' + cart.Product._id"
+          ><span class="card-title left-align green-text">{{
+            cart.Product.name
+          }}</span></a
+        >
+        <div>
+          <label for="quantity">Quantity</label>
+          <input
+            type="number"
+            id="quantity"
+            min="1"
+            [value]="cart.quantity"
+            (input)="emitCart(cart._id, quantityInput.value)"
+            #quantityInput
+          />
+        </div>
+        <p>Amount : Rp{{ cart.amount }},-</p>
+      </div>
+      <div class="card-action">
+        <button
+          (click)="emitCartForDelete(cart._id)"
+          class="btn green waves-effect waves-light loginFormButton"
+          type="submit"
+        >
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

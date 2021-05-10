@@ -1,0 +1,19 @@
+<section class="container productDetailContainer" *ngIf="isLoaded">
+  <h4 class="black-text center">Product Detail</h4>
+  <div class="divider productDetailContainerDivider"></div>
+  <div class="row productDetailContainerRow" *ngIf="!isError">
+    <app-product-detail-image [product]="product"></app-product-detail-image>
+    <app-product-detail-info [product]="product"></app-product-detail-info>
+    <app-product-detail-description
+      [product]="product"
+    ></app-product-detail-description>
+  </div>
+  <app-page-data-not-found *ngIf="isError"></app-page-data-not-found>
+</section>
+<app-page-footer *ngIf="isLoaded"></app-page-footer>
+<app-product-detail-floating-action-button
+  [product]="product"
+  (addProductToCart)="addProductToCart($event)"
+  *ngIf="isLoaded && !isError"
+></app-product-detail-floating-action-button>
+<app-page-loader *ngIf="!isLoaded"></app-page-loader>

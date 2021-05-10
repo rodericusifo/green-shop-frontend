@@ -1,0 +1,12 @@
+.serviceListContainer {
+  margin: 60px auto 20px !important;
+  min-height: 100% !important;
+}
+
+.serviceListDivider {
+  min-height: 2px !important;
+}
+
+.serviceListRow {
+  margin-top: 20px !important;
+}

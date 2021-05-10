@@ -1,0 +1,7 @@
+<section class="container loginContainer" *ngIf="isLoaded">
+  <h4 class="black-text center">Login</h4>
+  <div class="divider loginContainerDivider"></div>
+  <app-login-form (loginUser)="loginUser($event)"></app-login-form>
+</section>
+<app-page-footer *ngIf="isLoaded"></app-page-footer>
+<app-page-loader *ngIf="!isLoaded"></app-page-loader>

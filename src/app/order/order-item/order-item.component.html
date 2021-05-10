@@ -1,0 +1,36 @@
+<div class="col s12">
+  <div class="col-content card orderItemCard">
+    <h5 class="center">Order</h5>
+    <div class="divider orderItemDivider"></div>
+    <div class="orderItemBuyerInfo">
+      <h6 class="underlineHeader">Billed to</h6>
+      <p>Name: {{ order.buyer.name }}</p>
+      <p>Address: {{ order.buyer.address }}</p>
+      <p>Phone Number: {{ order.buyer.phoneNumber }}</p>
+    </div>
+    <div class="orderedItemsContainer">
+      <h6 class="underlineHeader">Ordered Items</h6>
+      <table class="responsive-table highlight">
+        <thead>
+          <tr>
+            <th class="left-align">Product Name</th>
+            <th class="center-align">Quantity</th>
+            <th class="right-align">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cart of order.Carts">
+            <td class="left-align">{{ cart.Product.name }}</td>
+            <td class="center-align">{{ cart.quantity }}</td>
+            <td class="right-align">Rp{{ cart.amount }},-</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="right-align orderedItemTotal">
+      <p>
+        <span class="orderedItemTotalHeader">Total:</span>Rp{{ order.total }},-
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+.pageLoader {
+  position: fixed;
+  width: 30% !important;
+  left: 35% !important;
+  right: 35% !important;
+  top: 50% !important;
+  bottom: 50% !important;
+}

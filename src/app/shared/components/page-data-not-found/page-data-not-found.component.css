@@ -1,0 +1,8 @@
+.pageDataNotFound {
+  margin: 120px auto !important;
+  opacity: 0.4;
+}
+
+.pageDataNotFoundHeader {
+  font-weight: bold !important;
+}

@@ -1,0 +1,12 @@
+.productDetailContainer {
+  margin: 20px auto !important;
+  min-height: 100% !important;
+}
+
+.productDetailContainerDivider {
+  min-height: 2px !important;
+}
+
+.productDetailContainerRow {
+  margin-top: 20px !important;
+}

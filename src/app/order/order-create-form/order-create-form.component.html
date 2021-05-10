@@ -1,0 +1,70 @@
+<form
+  class="row card orderCreateForm"
+  [formGroup]="orderForm"
+  (ngSubmit)="onSubmit()"
+>
+  <h5 class="center">Order - Form</h5>
+  <div class="input-field col s12">
+    <input
+      id="buyerName"
+      type="text"
+      class="validate"
+      formControlName="buyerName"
+      required
+    />
+    <label for="buyerName">Buyer Name</label>
+    <span
+      class="helper-text"
+      data-error="Required field"
+      *ngIf="
+        !orderForm.get('buyerName')!.valid &&
+        orderForm.get('buyerName')!.touched
+      "
+    ></span>
+  </div>
+  <div class="input-field col s12">
+    <textarea
+      id="buyerAddress"
+      class="materialize-textarea validate"
+      formControlName="buyerAddress"
+      required
+    >
+    </textarea>
+    <label for="buyerAddress">Buyer Address</label>
+    <span
+      class="helper-text"
+      data-error="Required field"
+      *ngIf="
+        !orderForm.get('buyerAddress')!.valid &&
+        orderForm.get('buyerAddress')!.touched
+      "
+    ></span>
+  </div>
+  <div class="input-field col s12">
+    <input
+      id="buyerPhoneNumber"
+      type="tel"
+      class="validate"
+      formControlName="buyerPhoneNumber"
+      required
+    />
+    <label for="buyerPhoneNumber">Buyer Phone Number</label>
+    <span
+      class="helper-text"
+      data-error="Required field"
+      *ngIf="
+        !orderForm.get('buyerPhoneNumber')!.valid &&
+        orderForm.get('buyerPhoneNumber')!.touched
+      "
+    ></span>
+  </div>
+  <div class="center">
+    <button
+      [disabled]="!orderForm.valid"
+      class="btn green waves-effect waves-light orderCreateFormButton"
+      type="submit"
+    >
+      Order
+    </button>
+  </div>
+</form>

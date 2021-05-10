@@ -1,0 +1,13 @@
+<section class="container orderListContainer" *ngIf="isLoaded">
+  <h4 class="black-text center">List of Order</h4>
+  <div class="divider orderListDivider"></div>
+  <div class="row orderListRow" *ngIf="!isError">
+    <app-order-item
+      *ngFor="let order of orders"
+      [order]="order"
+    ></app-order-item>
+  </div>
+  <app-page-data-not-found *ngIf="isError"></app-page-data-not-found>
+</section>
+<app-page-footer *ngIf="isLoaded"></app-page-footer>
+<app-page-loader *ngIf="!isLoaded"></app-page-loader>

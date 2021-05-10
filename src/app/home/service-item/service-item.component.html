@@ -1,0 +1,16 @@
+<a [routerLink]="service.linkTo" [attr.aria-label]="service.ariaLabel">
+  <div class="col s12 l4">
+    <div class="col-content card serviceItem hoverable">
+      <h2 class="center green-text">
+        <i class="material-icons medium" aria-hidden="true">{{
+          service.iconName
+        }}</i>
+      </h2>
+      <h5 class="center black-text">{{ service.name }}</h5>
+
+      <p class="light black-text truncateText">
+        {{ service.description }}
+      </p>
+    </div>
+  </div>
+</a>

@@ -1,0 +1,20 @@
+.registerForm {
+  padding: 20px !important;
+  margin: 20px auto !important;
+  max-width: 300px;
+  width: auto;
+}
+
+.registerFormButton {
+  margin-top: 20px !important;
+}
+
+.registerFormInfo {
+  margin-top: 20px !important;
+}
+
+@media (min-width: 993px) {
+  .registerForm {
+    margin: 40px auto !important;
+  }
+}

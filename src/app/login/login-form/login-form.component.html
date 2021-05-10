@@ -1,0 +1,53 @@
+<form class="row card loginForm" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <h5 class="center">Login - Form</h5>
+  <div class="input-field col s12">
+    <input
+      id="email"
+      type="email"
+      class="validate"
+      formControlName="email"
+      required
+      email
+    />
+    <label for="email">Email</label>
+    <span
+      class="helper-text"
+      data-error="Please input a valid email"
+      *ngIf="!loginForm.get('email')!.valid && loginForm.get('email')!.touched"
+    ></span>
+  </div>
+  <div class="input-field col s12">
+    <input
+      id="password"
+      type="password"
+      class="validate"
+      formControlName="password"
+      required
+      minlength="6"
+    />
+    <label for="password">Password</label>
+    <span
+      class="helper-text"
+      data-error="Please input a valid password (at least 6 digits)"
+      *ngIf="
+        !loginForm.get('password')!.valid && loginForm.get('password')!.touched
+      "
+    ></span>
+  </div>
+  <div class="center">
+    <button
+      [disabled]="!loginForm.valid"
+      class="btn green waves-effect waves-light loginFormButton"
+      type="submit"
+    >
+      Login
+    </button>
+  </div>
+  <div class="center loginFormInfo">
+    <p class="grey-text">
+      Don't have an account yet?
+      <a [routerLink]="'/register'"><span class="green-text">Register</span></a>
+      here
+    </p>
+  </div>
+</form>
