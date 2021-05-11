@@ -11,9 +11,9 @@ const app = express();
 
 app.use(compression());
 app.use(requireHTTPS);
-app.use(express.static("./dist/green-shop-frontend"));
+app.use(express.static("dist/green-shop-frontend/"));
 
-app.get("/*", function (req, res) {
+app.get("/*", function (_req, res) {
   res.sendFile("index.html", { root: "dist/green-shop-frontend/" });
 });
 

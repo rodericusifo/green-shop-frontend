@@ -1,6 +1,6 @@
 # GREEN SHOP
 
-Green Shop is my e-commerce web app portofolio, which was published on [https://green-shop-frontend.herokuapp.com/](https://green-shop-frontend.herokuapp.com/)
+Green Shop is my e-commerce web app portofolio, which was published on [https://green-shop-app.herokuapp.com/](https://green-shop-app.herokuapp.com/)
 
 ## Description
 
